@@ -11347,15 +11347,15 @@ PrefabInstance:
       objectReference: {fileID: 1674053972}
     - target: {fileID: 8036797112639861914, guid: d44b961a343ea2d49817ab56bcf88225, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8036797112894082567, guid: d44b961a343ea2d49817ab56bcf88225, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.438606
+      value: 11.438933
       objectReference: {fileID: 0}
     - target: {fileID: 8036797112894082567, guid: d44b961a343ea2d49817ab56bcf88225, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.4662485
+      value: -5.444358
       objectReference: {fileID: 0}
     - target: {fileID: 8036797112894082808, guid: d44b961a343ea2d49817ab56bcf88225, type: 3}
       propertyPath: orthographic size

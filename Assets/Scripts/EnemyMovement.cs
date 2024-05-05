@@ -13,8 +13,6 @@ public class EnemyMovement : MonoBehaviour
     {
         myRigidbody2D =GetComponent<Rigidbody2D>(); 
     }
-
-    
     void Update()
     {
         Move();

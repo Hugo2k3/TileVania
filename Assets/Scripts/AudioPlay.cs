@@ -5,13 +5,8 @@ using UnityEngine;
 public class AudioPlay : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
-
-
     [Header("Background")]
     [SerializeField] AudioClip AudioBackground;
-    
-   
- 
     [Header("Shooting")]
     [SerializeField] AudioClip AudioClipShooting;
     [SerializeField] [Range(0f,1f)] float shootingVolume = 1.0f;
@@ -28,9 +23,6 @@ public class AudioPlay : MonoBehaviour
     [SerializeField] AudioClip AudioClipExit;
     [SerializeField] [Range(0f,1f)] float ExitVolume = 1.0f;
 
-
-   
-
     [Header("Die")]
     [SerializeField] AudioClip AudioDie;
     [SerializeField] [Range(0f,1f)] float DieVolume = 1.0f;
@@ -39,12 +31,25 @@ public class AudioPlay : MonoBehaviour
     [SerializeField] AudioClip AudioBouncing;
     [SerializeField] [Range(0f,1f)] float BouncingVolume = 1.0f;
 
+    [Header("Shop_effect")]
+    [SerializeField] AudioClip AudioShop_effect;
+    [SerializeField][Range(0f, 1f)] float ShopEffectVolume = 1.0f;
+
+    [Header("Shop_effect_nofi1")]
+    [SerializeField] AudioClip AudioShop_effect_nofi1;
+    [SerializeField][Range(0f, 1f)] float ShopEffectNofi1Volume = 1.0f;
+
+    [Header("Shop_effect_nofi2")]
+    [SerializeField] AudioClip AudioShop_effect_nofi2;
+    [SerializeField][Range(0f, 1f)] float ShopEffectNofi2Volume = 1.0f;
+
+    [Header("Shop_effect_success")]
+    [SerializeField] AudioClip AudioShop_effect_success;
+    [SerializeField][Range(0f, 1f)] float ShopEffectsuccessVolume = 1.0f;
+
     [Header("Win")]
-    [SerializeField] AudioClip AudioWin;
-   
-    static AudioPlay instance;
-
-
+    [SerializeField] AudioClip AudioWin;   
+    public static AudioPlay instance;
     private void Awake()
     {
         ManageSingleton();
@@ -54,12 +59,14 @@ public class AudioPlay : MonoBehaviour
     {
         LevelExit.Win += PlayWin;
         MainMenu.OnLoadMainMenu += PlayBackground;
+        pause_menu.onloadMenu += PlayBackground;
     }
 
      void OnDestroy()
     {
-                LevelExit.Win -= PlayWin;
+        LevelExit.Win -= PlayWin;
         MainMenu.OnLoadMainMenu -= PlayBackground;
+        pause_menu.onloadMenu -= PlayBackground;
     }
     void ManageSingleton()
     {
@@ -82,9 +89,26 @@ public class AudioPlay : MonoBehaviour
     {
         PlayClip(AudioClipJumping, JumpingVolume);
     }
+    public void PlayShop_effect()
+    {
+        PlayClip(AudioShop_effect, ShopEffectVolume);
+    }
+
     public void  PlayCoin()
     {
         PlayClip(AudioClipCoin, CoinVolume);
+    }
+    public void PlayShop_effect_nofi1()
+    {
+        PlayClip(AudioShop_effect_nofi1, ShopEffectNofi1Volume);
+    }
+    public void PlayShop_effect_nofi2()
+    {
+        PlayClip(AudioShop_effect_nofi2, ShopEffectNofi2Volume);
+    }
+    public void PlayShop_effect_success()
+    {
+        PlayClip(AudioShop_effect_success, ShopEffectsuccessVolume);
     }
     public void PlayExit()
     {

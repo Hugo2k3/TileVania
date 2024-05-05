@@ -6,17 +6,26 @@ using UnityEngine.SceneManagement;
 
 public class ScenePersist : MonoBehaviour
 {
-   
+   public static ScenePersist instance;
     void Awake()
     {
-        int NumScenePersists = FindObjectsOfType<ScenePersist>().Length;
-        if (NumScenePersists > 1)
+        //int NumScenePersists = FindObjectsOfType<ScenePersist>().Length;
+        //if (NumScenePersists > 1)
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else
+        //{
+        //    DontDestroyOnLoad(gameObject);
+        //}
+        if (instance == null)
         {
-            Destroy(gameObject);
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            DontDestroyOnLoad(gameObject);
+            Destroy(gameObject);
         }
     }
     

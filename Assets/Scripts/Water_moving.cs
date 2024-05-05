@@ -9,7 +9,7 @@ public class Water_moving : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       float yMove=water_speed* Time.deltaTime;
+        float yMove=water_speed* Time.deltaTime;
         transform.Translate(new Vector2(0, yMove*direction));
     }
 }

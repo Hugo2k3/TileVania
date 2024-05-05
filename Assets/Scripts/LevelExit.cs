@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelExit : MonoBehaviour
 {
-    AudioPlay audioPlay;
+    
     [SerializeField] float levelLoadDelay = 1f;
     [SerializeField] float levelExitSlowMo = 0.5f;
     public static event Action Win;
     private void Awake()
     {
-        audioPlay = FindObjectOfType<AudioPlay>();
+        
         
     }
     void OnTriggerEnter2D(Collider2D collision)
@@ -21,7 +21,8 @@ public class LevelExit : MonoBehaviour
         if (collision.tag=="Player")
         {
             StartCoroutine(LoadNextLevel());
-            audioPlay.PlayExit();
+            //audioPlay.PlayExit();
+            AudioPlay.instance.PlayExit();
 
         }
        
@@ -42,8 +43,7 @@ public class LevelExit : MonoBehaviour
         {
             Win?.Invoke();
         }
-        FindObjectOfType<ScenePersist>().ResetScenePersist();
-
+        ScenePersist.instance.ResetScenePersist();
         SceneManager.LoadScene(nextSceneIndex);
     }
    

@@ -48,17 +48,25 @@ MonoBehaviour:
   audioSource: {fileID: 1754284515584642310}
   AudioBackground: {fileID: 8300000, guid: 95b89b8d89317db4593e13c29324a641, type: 3}
   AudioClipShooting: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
-  shootingVolume: 0.258
+  shootingVolume: 0.25
   AudioClipJumping: {fileID: 8300000, guid: 7e9ee6dc04a5d40d1a5dfc4beb9865e7, type: 3}
-  JumpingVolume: 0.242
+  JumpingVolume: 0.25
   AudioClipCoin: {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
-  CoinVolume: 0.248
+  CoinVolume: 0.25
   AudioClipExit: {fileID: 8300000, guid: 0c008ee3ee72a4362a35be25fa5de043, type: 3}
-  ExitVolume: 0.224
+  ExitVolume: 0.25
   AudioDie: {fileID: 8300000, guid: 2d8457a675c2a1046ad34957b8b0940c, type: 3}
-  DieVolume: 0.242
+  DieVolume: 0.25
   AudioBouncing: {fileID: 8300000, guid: 19f89c6e740e7447f9e12a8310d3e973, type: 3}
-  BouncingVolume: 0.218
+  BouncingVolume: 0.25
+  AudioShop_effect: {fileID: 8300000, guid: 4e1ff8faed12a475eba9be0e46072269, type: 3}
+  ShopEffectVolume: 0.256
+  AudioShop_effect_nofi1: {fileID: 8300000, guid: dc6614beca09347ec9b258f12d154bdd, type: 3}
+  ShopEffectNofi1Volume: 0.25
+  AudioShop_effect_nofi2: {fileID: 8300000, guid: 724131bc8a7f34041bb9f1701f0cb58d, type: 3}
+  ShopEffectNofi2Volume: 0.25
+  AudioShop_effect_success: {fileID: 8300000, guid: 119556acd43d88e43925b164b4fd7a5c, type: 3}
+  ShopEffectsuccessVolume: 0.25
   AudioWin: {fileID: 8300000, guid: 0b4d93888ae70f3479933d5eefaaec02, type: 3}
 --- !u!82 &1754284515584642310
 AudioSource:

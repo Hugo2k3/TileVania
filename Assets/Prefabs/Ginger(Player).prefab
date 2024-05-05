@@ -161,8 +161,7 @@ MonoBehaviour:
   bullet: {fileID: 7362262073216707316, guid: 08257448c84f77f45a96900d4699929d, type: 3}
   gun: {fileID: 5886585131466984243}
   isAlive: 1
-  jump: {fileID: 8300000, guid: 7e9ee6dc04a5d40d1a5dfc4beb9865e7, type: 3}
-  soundgun: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
+  isGun: 0
 --- !u!50 &713715560
 Rigidbody2D:
   serializedVersion: 4
